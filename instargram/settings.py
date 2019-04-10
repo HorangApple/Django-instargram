@@ -29,7 +29,7 @@ ALLOWED_HOSTS = ['djangogo-horangapple.c9users.io']
 
 
 # Application definition
-
+# pip install django-bootstrap4 로 설치
 INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'posts',
+    'bootstrap4',
 ]
 
 MIDDLEWARE = [
