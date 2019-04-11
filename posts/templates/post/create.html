@@ -4,7 +4,8 @@
 
 {% block body %}
 <h1>새로운 Post 작성하기</h1>
-<form method="POST">
+<!--파일을 넘길 땐 enctype 값을 넣어야한다.-->
+<form method="POST" enctype="multipart/form-data">
   {% csrf_token %}
   {% bootstrap_form form %}
   {% buttons %}
