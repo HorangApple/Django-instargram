@@ -9,7 +9,10 @@ def create(request):
         # 글을 작성하기.
         form = PostModelForm(request.POST,request.FILES)
         if form.is_valid():
-            form.save()
+            # 검증 후 user 정보를 얻는다.
+            post = form.save(commit=False)
+            post.user=request.user
+            post.save()
             return redirect('posts:list')
         
     # GET 요청이 오면
