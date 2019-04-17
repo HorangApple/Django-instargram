@@ -128,3 +128,6 @@ MEDIA_URL = '/media/'
 
 # 실제 경로
 MEDIA_ROOT = os.path.join(BASE_DIR,'media')
+
+# AUTH_USER_MODEL을 임의로 만든 유저 DB로 설정
+AUTH_USER_MODEL = "accounts.User"
